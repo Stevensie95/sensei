@@ -13,6 +13,7 @@ const reducers = {
 		job: {
 			...job,
 			...job.status,
+			files: job.files && Object.values( job.files ),
 		},
 	} ),
 	SET_ERROR: ( { error }, state ) => ( { ...state, error } ),
